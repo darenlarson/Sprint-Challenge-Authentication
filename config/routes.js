@@ -1,4 +1,4 @@
-const express = require('express');
+
 const knex = require('knex');
 const axios = require('axios');
 const bcrypt = require('bcryptjs');
@@ -9,6 +9,7 @@ const knexConfig = require('../knexfile.js');
 const db = knex(knexConfig.development);
 
 const { authenticate } = require('../auth/authenticate');
+
 
 module.exports = server => {
   server.post('/api/register', register);
